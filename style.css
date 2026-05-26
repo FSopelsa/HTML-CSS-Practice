@@ -1,0 +1,52 @@
+/* Universal selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Overall page styling */
+body {
+    background-color: #f4f4f4;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/* Type selector */
+h1 {
+    color: darkblue;
+}
+
+/* Class selector */
+.highlight {
+    color: green;
+    font-weight: bold;
+}
+
+/* ID selector */
+#main-header {
+    padding: 20px;
+}
+
+/* Center the table */
+table {
+    margin: 0 auto;
+}
+
+/* Center lists nicely */
+ol, ul {
+    display: inline-block;
+    text-align: left;
+}
+
+/* Box model styling */
+.box {
+    width: 300px;
+    height: 150px;
+
+    padding: 20px;
+    margin: 50px auto;
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    background-color: #dfefff;
+}

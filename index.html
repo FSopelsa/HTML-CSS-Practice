@@ -4,44 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML & CSS Comprehensive Practice Sheet</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Header 1</h1>
-            <p>This is a paragraph of text.</p>
+        <h1 id="main-header">- Header (h1)</h1>
+            <p class="highlight">This is a paragraph of text.</p>
     </header>
     <nav>
-        <h2>Nav (h2)</h2>
-            <p>This is another paragraph of text.</p>
+        <h2>- Nav (h2)</h2>
+            <img 
+                src="https://lexicongruppen.se/media/wi5hphtd/lexicon-logo.svg" 
+                alt="Lexicon Group company logo">
+            <br>
+            <a href="https://www.lexicon.se" target="_blank" rel="noopener noreferrer">
+                Visit Lexicon
+            </a>
     </nav>
     <main>
         <!--Main content area: contains a level-3 heading, a link to Lexicon,
             an image (Lexicon logo), an ordered list of top goals, and an
             unordered list of programming languages to learn.-->
-        <h3>Main (h3)</h3>
-            <a href="https://www.lexicon.se" target="_blank" rel="noopener noreferrer">
-                Visit Lexicon
-            </a>
-            <img 
-                src="https://lexicongruppen.se/media/wi5hphtd/lexicon-logo.svg" 
-                alt="Lexicon Group company logo">
+        <h3>- Main (h3)</h3>
             <ol>
                 <p><strong>Top 3 goals for this year:</strong></p>
+                <li>Get better at <em>VCS</em>.</li>
                 <li>Get better at <em>Java</em>.</li>
                 <li>Get better at <em>LLM prompting</em>.</li>
-                <li>Get better at <em>VCS</em>.</li>
             </ol>
             <ul>
                 <p><strong>Programming languages I want to learn:</strong></p>
                 <li><em>Java</em></li>
                 <li><em>Python</em></li>
-                <li><em>JavaScript</em></li>
-                <li><em>HTML</em></li>
+                <li><em>C++</em></li>
+                <li><em>Clojure</em></li>
             </ul>
     </main>
     <section>   
-        <h4>Section (h4)</h4>
-            <p>This is a fourth paragraph of text.</p>
+        <h4>- Section (h4)</h4>
+            <p>This is a table:</p>
         <!-- Table -->
         <table border="1">
             <thead>
@@ -70,9 +71,8 @@
         </table>
     </section>
     <article> 
-        <h5>Article (h5)</h5>
-            <p>This is a fifth paragraph of text.</p>
-
+        <h5>- Article (h5)</h5>
+            <p>This is a form:</p>
             <!-- Registration Form -->
         <form>
             <!-- Username -->
@@ -108,11 +108,14 @@
         </form>
     </article>
     <aside>
-        <h6>Aside (h6)</h6>
-            <p>This is a sixth paragraph of text.</p>
+        <h6>- Aside (h6)</h6>
+            <!-- Div for box model -->
+            <div class="box">
+                This div demonstrates the box model.
+            </div>
     </aside>
     <footer>
-        <h1>Footer (h1)</h1>
+        <h1>- Footer (h1)</h1>
             <p>This is a seventh paragraph of text.</p>
     </footer>
     
