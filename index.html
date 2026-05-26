@@ -42,10 +42,70 @@
     <section>   
         <h4>Section (h4)</h4>
             <p>This is a fourth paragraph of text.</p>
+        <!-- Table -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="2">User Information</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>25</td>
+                    <td>Active</td>
+                </tr>
+                <tr>
+                    <td>Emma</td>
+                    <td>30</td>
+                    <td>Inactive</td>
+                </tr>
+                <tr>
+                    <td>Lucas</td>
+                    <td>28</td>
+                    <td>Active</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
     <article> 
         <h5>Article (h5)</h5>
             <p>This is a fifth paragraph of text.</p>
+
+            <!-- Registration Form -->
+        <form>
+            <!-- Username -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+
+            <br><br>
+
+            <!-- Email with required validation -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <br><br>
+
+            <!-- Password -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+
+            <br><br>
+
+            <!-- Dropdown Menu -->
+            <label for="country">Choose a country:</label>
+            <select id="country" name="country">
+                <option value="sweden">Sweden</option>
+                <option value="norway">Norway</option>
+                <option value="denmark">Denmark</option>
+            </select>
+
+            <br><br>
+
+            <!-- Submit Button -->
+            <button type="submit">Register</button>
+        </form>
     </article>
     <aside>
         <h6>Aside (h6)</h6>
