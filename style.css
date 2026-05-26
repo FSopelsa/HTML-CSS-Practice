@@ -21,9 +21,20 @@ h1 {
     font-weight: bold;
 }
 
-/* ID selector */
+/* ID selectors */
 #main-header {
     padding: 20px;
+}
+
+/* 'Register' button */
+#submitButton {
+    margin-left: 30px;
+    padding: 10px 20px;
+    background-color: #34ac38;
+    color: rgb(255, 255, 255);
+    border-color: #0f3f11;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Center the table */
@@ -37,6 +48,11 @@ ol, ul {
     text-align: left;
 }
 
+/* Center the form */
+form {
+    display: inline-block;
+}
+
 /* Box model styling */
 .box {
     width: 300px;
@@ -48,5 +64,5 @@ ol, ul {
     border: 2px solid black;
     border-radius: 10px;
 
-    background-color: #dfefff;
+    background-color: #c3ddf8;
 }
