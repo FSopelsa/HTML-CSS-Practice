@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button id="themeToggle" class="theme-toggle" type="button">🌙 Dark Mode</button>
     <header>
         <h1 id="main-header">- Header (h1)</h1>
             <p class="highlight">This is a paragraph of text.</p>
@@ -14,6 +15,12 @@
     </header>
     <nav>
         <h2>- Nav (h2)</h2>
+            <div class="nav-links-inline">
+                <a href="#main-header">Top</a>
+                <a href="#main-content">Main</a>
+                <a href="#gallery">Gallery</a>
+            </div>
+            <br><br>
             <img 
                 src="https://lexicongruppen.se/media/wi5hphtd/lexicon-logo.svg" 
                 alt="Lexicon Group company logo">
@@ -22,7 +29,7 @@
                 Visit Lexicon
             </a>
     </nav>
-    <main>
+    <main id="main-content">
         <!--Main content area: contains a level-3 heading, a link to Lexicon,
             an image (Lexicon logo), an ordered list of top goals, and an
             unordered list of programming languages to learn.-->
@@ -41,7 +48,7 @@
                 <li><em>Clojure</em></li>
             </ul>
     </main>
-    <section>   
+    <section id="table-section">   
         <h4>- Section (h4)</h4>
             <p>This is a table:</p>
         <!-- Table -->
@@ -71,7 +78,7 @@
             </tbody>
         </table>
     </section>
-    <article> 
+    <article id="signup-form"> 
         <h5>- Article (h5)</h5>
             <p>This is a form:</p>
             <!-- Registration Form -->
@@ -87,8 +94,6 @@
             <!-- Email with required validation -->
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-
-            <br><br>
 
             <!-- Dropdown Menu -->
             <label for="country">Choose a country:</label>
@@ -115,20 +120,20 @@
             </div>
             <nav class="navbar">
                 <div class="logo">Logo</div>
-
+                <button class="dropdown-toggle" type="button">Menu</button>
+                <div class="sidebar">
+                    <a href="#">Dashboard</a>
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-            <div class="sidebar">
-                <a href="#">Dashboard</a>
-                <a href="#">Profile</a>
-                <a href="#">Settings</a>
-                <a href="#">Logout</a>
-            </div>
-            <div class="gallery">
+            <div class="gallery" id="gallery">
                 <div class="item">1</div>
                 <div class="item">2</div>
                 <div class="item">3</div>
@@ -137,7 +142,7 @@
                 <div class="item">6</div>
             </div>
     </aside>
-    <footer>
+    <footer id="page-footer">
         <h1>- Footer (h1)</h1>
             <p>This is a seventh paragraph of text.</p>
             <div class="grid-layout">
@@ -146,6 +151,31 @@
                 <div class="box">Box 2</div>
             </div>
     </footer>
-    
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Load dark mode preference from localStorage
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-theme');
+            themeToggle.textContent = '☀️ Light Mode';
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            body.classList.add('dark-theme');
+            themeToggle.textContent = '☀️ Light Mode';
+        }
+
+        // Toggle dark mode on button click
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            
+            if (body.classList.contains('dark-theme')) {
+                localStorage.setItem('darkMode', 'enabled');
+                themeToggle.textContent = '☀️ Light Mode';
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                themeToggle.textContent = '🌙 Dark Mode';
+            }
+        });
+    </script>
 </body>
 </html>
