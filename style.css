@@ -26,6 +26,24 @@ h1 {
     padding: 20px;
 }
 
+/* Pseudo-class selector for hover effect */
+.hover-btn {
+    padding: 12px 24px;
+    border: none;
+    background-color: royalblue;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-btn:hover {
+    background-color: darkblue;
+    transform: scale(1.25);
+}
+
 /* 'Register' button */
 #submitButton {
     margin-left: 30px;
@@ -35,6 +53,11 @@ h1 {
     border-color: #0f3f11;
     border-radius: 5px;
     cursor: pointer;
+}
+#submitButton:hover {
+    background-color: #0f3f11;
+    color: #34ac38;
+    transform: scale(1.25);
 }
 
 /* Center the table */
@@ -68,11 +91,95 @@ form {
 }
 
 /* Flexbox centering */
-
 .flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
     background-color: #e0e0e0;
+}.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.center-box {
+    padding: 40px;
+    background-color: steelblue;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+    background-color: #222;
+}
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    width: 200px;
+    padding: 20px;
+    background-color: #333;
+}
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Grid layout for gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.item {
+    background-color: lightblue;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Grid layout for features */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.feature {
+    grid-column: span 2;
+
+    background-color: orange;
+    padding: 40px;
+    border-radius: 8px;
+}
+.box {
+    background-color: lightgray;
+    padding: 40px;
+    border-radius: 8px;
 }
