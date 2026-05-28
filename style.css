@@ -66,3 +66,81 @@ form {
 
     background-color: #c3ddf8;
 }
+
+/* Flexbox centering */
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.center-box {
+    padding: 40px;
+    background-color: steelblue;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Navigation Bar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+    background-color: #222;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Sidebar */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    width: 200px;
+    padding: 20px;
+    background-color: #333;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Grid layout for gallery */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item {
+    background-color: lightblue;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+}
